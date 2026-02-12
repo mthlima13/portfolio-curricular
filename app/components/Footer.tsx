@@ -6,7 +6,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Matheus Fellipe Fernandes Lima. Todos os direitos reservados.
         </p>
         <p className="text-sm text-[var(--text-muted)] mt-2">
-          Desenvolvido com Next.js e muito ❤️
+          Desenvolvido com Next.js
         </p>
       </div>
     </footer>
