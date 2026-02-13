@@ -3,10 +3,10 @@ export default function Footer() {
     <footer className="py-8 px-4 border-t border-[var(--border)] bg-white dark:bg-[#1a1a1a]">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-[var(--text-muted)]">
-          © {new Date().getFullYear()} Matheus Fellipe Fernandes Lima. Todos os direitos reservados.
+          © {new Date().getFullYear()} MF. Todos os direitos reservados.
         </p>
         <p className="text-sm text-[var(--text-muted)] mt-2">
-          Desenvolvido com Next.js
+          
         </p>
       </div>
     </footer>

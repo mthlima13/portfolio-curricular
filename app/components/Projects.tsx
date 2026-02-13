@@ -50,7 +50,7 @@ export default function Projects() {
                 href="https://github.com/mthlima13"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--primary)] text-white rounded-lg font-semibold hover:bg-[var(--primary-dark)] transition-all duration-300 card-hover"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-(--primary) text-white rounded-lg font-semibold hover:bg-[var(--primary-dark)] transition-all duration-300 card-hover"
               >
                 <svg
                   className="w-6 h-6"
@@ -69,7 +69,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <p className="text-center text-[var(--text-muted)] mt-12 text-lg">
+        <p className="text-center text-(--text-muted) mt-12 text-lg">
           Sinta-se à vontade para explorar meus repositórios e contribuir com feedback!
         </p>
       </div>
