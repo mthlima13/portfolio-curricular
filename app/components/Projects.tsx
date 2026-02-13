@@ -47,7 +47,7 @@ export default function Projects() {
                 Cada projeto representa um aprendizado e uma oportunidade de aplicar novas tecnologias e conceitos.
               </p>
               <a
-                href="https://github.com"
+                href="https://github.com/mthlima13"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--primary)] text-white rounded-lg font-semibold hover:bg-[var(--primary-dark)] transition-all duration-300 card-hover"
