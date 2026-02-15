@@ -92,7 +92,7 @@ export default function Contact() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <p className="text-center text-lg text-[var(--text-muted)] mb-12">
+          <p className="text-center text-lg text-(--text-muted) mb-12">
             Estou sempre aberto a conversar sobre projetos, oportunidades ou apenas trocar ideias sobre tecnologia!
           </p>
           <div className="flex flex-wrap justify-center gap-6">
@@ -102,7 +102,7 @@ export default function Contact() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center gap-3 px-6 py-4 bg-white dark:bg-[#1a1a1a] border border-[var(--border)] rounded-lg font-semibold transition-all duration-300 card-hover ${link.color} ${
+                className={`flex items-center gap-3 px-6 py-4 bg-white dark:bg-[#1a1a1a] border border-(--border) rounded-lg font-semibold transition-all duration-300 card-hover ${link.color} ${
                   mounted
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
