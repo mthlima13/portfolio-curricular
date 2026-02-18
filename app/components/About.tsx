@@ -32,21 +32,23 @@ export default function About() {
           <span className="gradient-text">Sobre Mim</span>
         </h2>
         <div
-          className={`space-y-6 text-lg text-[var(--text-muted)] transition-all duration-1000 ${
+          className={`space-y-6 text-lg text-(--text-muted) transition-all duration-1000 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <p>
-            Olá! Sou <strong className="text-[var(--foreground)]">Matheus Fellipe Fernandes Lima</strong>, um desenvolvedor em constante aprendizado e evolução.
+            Olá! Sou <strong className="text-foreground">Matheus Fellipe Fernandes Lima</strong>, desenvolvedor de software em formação, com foco em desenvolvimento backend utilizando Java e tecnologias relacionadas..
           </p>
           <p>
-            Embora ainda não tenha experiência profissional formal, dedico meu tempo ao desenvolvimento de projetos pessoais e ao estudo contínuo das melhores práticas de programação. Minha paixão pela tecnologia me motiva a criar soluções funcionais e bem estruturadas.
+          Mesmo sem experiência profissional formal, venho construindo projetos próprios que aplicam conceitos de programação orientada a objetos, APIs REST, persistência de dados e boas práticas de engenharia de software.
           </p>
           <p>
-            Tenho diversos projetos no GitHub que demonstram meu conhecimento e dedicação. Cada projeto é uma oportunidade de aprender algo novo e aplicar conceitos importantes de desenvolvimento de software.
+          Embora meu foco seja o backend, também desenvolvo interfaces modernas e responsivas utilizando Next.js e TypeScript, o que me permite construir aplicações completas e bem integradas.
+
+Mantenho um portfólio ativo no GitHub, onde desenvolvo soluções práticas que demonstram minha evolução técnica, organização de código e capacidade de resolver problemas reais.mento e dedicação. Cada projeto é uma oportunidade de aprender algo novo e aplicar conceitos importantes de desenvolvimento de software.
           </p>
           <p>
-            Estou sempre aberto a novas oportunidades e desafios que me permitam crescer profissionalmente e contribuir com projetos interessantes.
+          Busco minha primeira oportunidade na área de desenvolvimento, onde eu possa aprender com profissionais experientes, contribuir com soluções eficientes e evoluir continuamente como desenvolvedor.
           </p>
         </div>
       </div>

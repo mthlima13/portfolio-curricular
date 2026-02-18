@@ -64,7 +64,7 @@ export default function Header() {
                 <a
                   href={`#${item.id}`}
                   onClick={(e) => handleNavClick(e, item.id)}
-                  className={`text-sm font-medium text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors duration-300 ${
+                  className={`text-sm font-medium text-(--text-muted) hover:text-(--primary) transition-colors duration-300 ${
                     mounted ? "opacity-100" : "opacity-0"
                   }`}
                   style={{ transitionDelay: `${index * 0.05}s` }}
@@ -77,7 +77,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors"
+              className="p-2 text-(--text-muted) hover:text-(--primary) transition-colors"
               aria-expanded={menuOpen}
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
             >
@@ -100,12 +100,12 @@ export default function Header() {
           }`}
           style={{ background: "inherit" }}
         >
-          <ul className="flex flex-col gap-1 py-4 px-4 bg-white/95 dark:bg-[#1a1a1a]/95 backdrop-blur-md border-t border-[var(--border)]">
+          <ul className="flex flex-col gap-1 py-4 px-4 bg-white/95 dark:bg-[#1a1a1a]/95 backdrop-blur-md border-t border-(--border)">
             {navItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={(e) => handleNavClick(e, item.id)}
-                  className="block w-full text-left py-3 px-4 text-sm font-medium text-[var(--text-muted)] hover:text-[var(--primary)] hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors"
+                  className="block w-full text-left py-3 px-4 text-sm font-medium text-(--text-muted) hover:text-(--primary) hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors"
                 >
                   {item.label}
                 </button>

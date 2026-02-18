@@ -36,13 +36,13 @@ export default function Projects() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="bg-gradient-to-br from-[var(--primary)]/10 to-[var(--secondary)]/10 dark:from-[var(--primary)]/20 dark:to-[var(--secondary)]/20 p-8 md:p-12 rounded-2xl border border-[var(--border)] card-hover">
+          <div className="bg-linear-to-br from-(--primary)/10 to-(--secondary)/10 dark:from-(--primary)/20 dark:to-(--secondary)/20 p-8 md:p-12 rounded-2xl border border-(--border) card-hover">
             <div className="text-center">
               <div className="text-6xl mb-6">💻</div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Projetos no GitHub
               </h3>
-              <p className="text-lg text-[var(--text-muted)] mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-(--text-muted) mb-8 max-w-2xl mx-auto">
                 Estou constantemente desenvolvendo projetos pessoais e compartilhando meu código no GitHub. 
                 Cada projeto representa um aprendizado e uma oportunidade de aplicar novas tecnologias e conceitos.
               </p>
@@ -50,7 +50,7 @@ export default function Projects() {
                 href="https://github.com/mthlima13"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-(--primary) text-white rounded-lg font-semibold hover:bg-[var(--primary-dark)] transition-all duration-300 card-hover"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-(--primary) text-white rounded-lg font-semibold hover:bg-(--primary-dark) transition-all duration-300 card-hover"
               >
                 <svg
                   className="w-6 h-6"
