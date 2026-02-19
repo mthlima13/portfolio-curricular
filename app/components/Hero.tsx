@@ -98,10 +98,10 @@ export default function Hero() {
             <span className="gradient-text-hero">Matheus Fellipe</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Desenvolvedor apaixonado por criar soluções elegantes
+          Desenvolvedor em formação com foco em backend e desenvolvimento web.
           </p>
           <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            Ainda estou construindo minha experiência profissional, mas já tenho projetos interessantes no GitHub que demonstram minha paixão por programação.
+          Desenvolvo projetos próprios utilizando tecnologias modernas, aplicando boas práticas, organização de código e construção de APIs e aplicações funcionais.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
             <button
