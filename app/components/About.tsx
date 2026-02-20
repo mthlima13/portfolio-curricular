@@ -45,7 +45,7 @@ export default function About() {
           <p>
           Embora meu foco seja o backend, também desenvolvo interfaces modernas e responsivas utilizando Next.js e TypeScript, o que me permite construir aplicações completas e bem integradas.
 
-Mantenho um portfólio ativo no GitHub, onde desenvolvo soluções práticas que demonstram minha evolução técnica, organização de código e capacidade de resolver problemas reais.mento e dedicação. Cada projeto é uma oportunidade de aprender algo novo e aplicar conceitos importantes de desenvolvimento de software.
+Mantenho um portfólio ativo no GitHub, onde desenvolvo soluções práticas que demonstram minha evolução técnica, organização de código e capacidade de resolver problemas reais.
           </p>
           <p>
           Busco minha primeira oportunidade na área de desenvolvimento, onde eu possa aprender com profissionais experientes, contribuir com soluções eficientes e evoluir continuamente como desenvolvedor.
