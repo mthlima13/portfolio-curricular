@@ -43,7 +43,7 @@ export default function About() {
           Mesmo sem experiência profissional formal, venho construindo projetos próprios que aplicam conceitos de programação orientada a objetos, APIs REST, persistência de dados e boas práticas de engenharia de software.
           </p>
           <p>
-          Embora meu foco seja o backend, também desenvolvo interfaces modernas e responsivas utilizando Next.js e TypeScript, o que me permite construir aplicações completas e bem integradas.
+          Embora meu foco seja o backend Java + Spring Boot, também desenvolvo interfaces modernas e responsivas utilizando Next.js e TypeScript, o que me permite construir aplicações completas e bem integradas.
 
 Mantenho um portfólio ativo no GitHub, onde desenvolvo soluções práticas que demonstram minha evolução técnica, organização de código e capacidade de resolver problemas reais.
           </p>
