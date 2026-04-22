@@ -51,37 +51,55 @@ Mantenho um portfólio ativo no GitHub, onde desenvolvo soluções práticas que
           Busco minha primeira oportunidade na área de desenvolvimento, onde eu possa aprender com profissionais experientes, contribuir com soluções eficientes e evoluir continuamente como desenvolvedor.
           </p>
 
-          <div className="mt-10 rounded-xl border border-zinc-200 dark:border-zinc-700 p-6 bg-zinc-50 dark:bg-zinc-900/40">
-            <h3 className="text-2xl font-semibold text-foreground mb-2">
-              Experiencia Profissional
+          <div className="mt-10">
+            <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-5">
+              Experiência Profissional
             </h3>
-            <p className="text-base md:text-lg text-(--text-muted) mb-2">
-              <strong className="text-foreground">Desenvolvedor de Software Jr</strong> - Remoto - Sao Paulo
-            </p>
-            <p className="text-base md:text-lg text-(--text-muted) mb-4">
-              <strong className="text-foreground">Empresa:</strong> Antarez
-            </p>
-            <p>
-              Atuo como desenvolvedor fullstack freelancer, participando do desenvolvimento e manutencao de aplicacoes web modernas, utilizando Java com Spring Boot no backend e Next.js/React no frontend.
-            </p>
-            <p>
-              No backend, fui responsavel pela criacao de APIs RESTful robustas, implementacao de regras de negocio e integracao com bancos de dados relacionais (SQL) e nao relacionais (MongoDB), garantindo performance e escalabilidade das aplicacoes.
-            </p>
-            <p>
-              No frontend, desenvolvi interfaces dinamicas e responsivas com foco em experiencia do usuario, utilizando boas praticas de componentizacao, tipagem e organizacao de codigo.
-            </p>
-            <p>
-              Tambem utilizei Docker para containerizacao das aplicacoes, facilitando a padronizacao de ambientes e o processo de deploy.
-            </p>
-            <p className="font-semibold text-foreground">Principais responsabilidades e tecnologias:</p>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>Desenvolvimento de APIs com Java e Spring Boot</li>
-              <li>Criacao de interfaces com React e Next.js</li>
-              <li>Integracao com bancos de dados SQL e MongoDB</li>
-              <li>Containerizacao com Docker</li>
-              <li>Versionamento de codigo com Git</li>
-              <li>Aplicacao de boas praticas de desenvolvimento (Clean Code, organizacao em camadas, etc.)</li>
-            </ul>
+
+            <article className="group relative overflow-hidden rounded-2xl border border-zinc-200/80 dark:border-zinc-700/80 bg-linear-to-br from-zinc-50 to-white dark:from-zinc-900/60 dark:to-zinc-900/30 p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-zinc-300 dark:hover:border-zinc-600">
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.12),transparent_45%)]" />
+
+              <div className="relative flex flex-col gap-4 md:flex-row md:items-start md:justify-between mb-6">
+                <div>
+                  <p className="text-sm md:text-base font-medium text-indigo-600 dark:text-indigo-400 mb-1">
+                    Freelancer • Atual
+                  </p>
+                  <h4 className="text-xl md:text-2xl font-bold text-foreground">
+                    Desenvolvedor de Software Jr
+                  </h4>
+                  <p className="text-(--text-muted) mt-1">
+                    Antarez • Remoto • São Paulo
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative space-y-4 text-base md:text-lg leading-relaxed text-(--text-muted)">
+                <p>
+                  Atuo como desenvolvedor fullstack freelancer, participando do desenvolvimento e manutenção de aplicações web modernas, utilizando Java com Spring Boot no backend e Next.js/React no frontend.
+                </p>
+                <p>
+                  No backend, fui responsável pela criação de APIs RESTful robustas, implementação de regras de negócio e integração com bancos de dados relacionais (SQL) e não relacionais (MongoDB), garantindo performance e escalabilidade das aplicações.
+                </p>
+                <p>
+                  No frontend, desenvolvi interfaces dinâmicas e responsivas com foco em experiência do usuário, utilizando boas práticas de componentização, tipagem e organização de código.
+                </p>
+                <p>
+                  Também utilizei Docker para containerização das aplicações, facilitando a padronização de ambientes e o processo de deploy.
+                </p>
+              </div>
+
+              <div className="relative mt-6 pt-5 border-t border-zinc-200 dark:border-zinc-700">
+                <p className="font-semibold text-foreground mb-3">Principais responsabilidades e tecnologias:</p>
+                <ul className="flex flex-wrap gap-2">
+                  <li className="rounded-full border border-zinc-300 dark:border-zinc-600 px-3 py-1 text-sm text-zinc-700 dark:text-zinc-200">Java + Spring Boot</li>
+                  <li className="rounded-full border border-zinc-300 dark:border-zinc-600 px-3 py-1 text-sm text-zinc-700 dark:text-zinc-200">React + Next.js</li>
+                  <li className="rounded-full border border-zinc-300 dark:border-zinc-600 px-3 py-1 text-sm text-zinc-700 dark:text-zinc-200">SQL + MongoDB</li>
+                  <li className="rounded-full border border-zinc-300 dark:border-zinc-600 px-3 py-1 text-sm text-zinc-700 dark:text-zinc-200">Docker</li>
+                  <li className="rounded-full border border-zinc-300 dark:border-zinc-600 px-3 py-1 text-sm text-zinc-700 dark:text-zinc-200">Git</li>
+                  <li className="rounded-full border border-zinc-300 dark:border-zinc-600 px-3 py-1 text-sm text-zinc-700 dark:text-zinc-200">Clean Code</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
       </div>
