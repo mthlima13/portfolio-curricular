@@ -6,10 +6,12 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import ReadingProgress from "./components/ReadingProgress";
 
 export default function Home() {
   return (
     <div id="inicio" className="min-h-screen">
+      <ReadingProgress />
       <Header />
       <main>
         <Hero />

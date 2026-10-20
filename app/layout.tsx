@@ -13,8 +13,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Matheus Fellipe Fernandes Lima | Portfolio",
-  description: "Portfolio de Matheus Fellipe Fernandes Lima - Desenvolvedor Java, Node.js, TypeScript e Next.js",
+  title: "Matheus Fellipe | Desenvolvedor Backend Java & Fullstack",
+  description:
+    "Portfolio de Matheus Fellipe Fernandes Lima — desenvolvedor backend Java com Spring Boot, APIs REST, SQL/NoSQL, Next.js e TypeScript. Formado em ADS, cursando Ciência da Computação.",
+  keywords: [
+    "desenvolvedor java",
+    "spring boot",
+    "backend java",
+    "next.js",
+    "typescript",
+    "react",
+    "fullstack",
+    "APIs REST",
+    "portfolio",
+    "Matheus Fellipe",
+  ],
+  authors: [{ name: "Matheus Fellipe Fernandes Lima" }],
+  openGraph: {
+    title: "Matheus Fellipe | Desenvolvedor Backend Java & Fullstack",
+    description:
+      "Portfolio de Matheus Fellipe — desenvolvedor backend Java com Spring Boot, APIs REST, Next.js e TypeScript.",
+    type: "website",
+    locale: "pt_BR",
+  },
+  twitter: {
+    card: "summary",
+    title: "Matheus Fellipe | Desenvolvedor Backend Java & Fullstack",
+    description:
+      "Portfolio de Matheus Fellipe — desenvolvedor backend Java com Spring Boot, APIs REST, Next.js e TypeScript.",
+  },
 };
 
 export default function RootLayout({

@@ -1,68 +1,93 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useInView } from "../hooks/useInView";
+import { useAnimatedCounter } from "../hooks/useAnimatedCounter";
 
 const technologies = [
-  { name: "Java", icon: "☕", color: "from-orange-500 to-red-600" },
-  { name: "Node.js", icon: "🟢", color: "from-green-500 to-emerald-600" },
-  { name: "TypeScript", icon: "📘", color: "from-blue-500 to-blue-700" },
-  { name: "Next.js", icon: "⚡", color: "from-gray-800 to-black dark:from-gray-200 dark:to-white" },
+  { name: "Java",        icon: "☕",  level: 80, color: "from-indigo-500 to-indigo-700",   label: "Avançado" },
+  { name: "Spring Boot", icon: "🌱",  level: 75, color: "from-indigo-400 to-indigo-600",   label: "Avançado" },
+  { name: "TypeScript",  icon: "📘",  level: 70, color: "from-indigo-500 to-violet-600",   label: "Intermediário" },
+  { name: "Next.js",     icon: "⚡",  level: 70, color: "from-neutral-600 to-neutral-800", label: "Intermediário" },
+  { name: "React",       icon: "⚛️",  level: 65, color: "from-indigo-400 to-indigo-500",   label: "Intermediário" },
+  { name: "SQL",         icon: "🗄️",  level: 75, color: "from-indigo-600 to-indigo-800",   label: "Avançado" },
+  { name: "MongoDB",     icon: "🍃",  level: 60, color: "from-indigo-400 to-violet-500",   label: "Intermediário" },
+  { name: "Docker",      icon: "🐳",  level: 55, color: "from-neutral-500 to-neutral-700", label: "Básico" },
+  { name: "Git",         icon: "🔀",  level: 80, color: "from-indigo-500 to-indigo-700",   label: "Avançado" },
+  { name: "Node.js",     icon: "🟢",  level: 60, color: "from-indigo-400 to-indigo-600",   label: "Intermediário" },
 ];
 
-export default function Skills() {
-  const [mounted, setMounted] = useState(false);
+interface SkillCardProps {
+  tech: (typeof technologies)[number];
+  index: number;
+  inView: boolean;
+}
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setMounted(true);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+function SkillCard({ tech, index, inView }: SkillCardProps) {
+  const count = useAnimatedCounter(tech.level, 1000 + index * 50, inView);
 
-    const element = document.getElementById("tecnologias");
-    if (element) observer.observe(element);
-
-    return () => {
-      if (element) observer.unobserve(element);
-    };
-  }, []);
+  // Direções alternadas: par entra da esquerda, ímpar da direita
+  const slideClass = index % 2 === 0
+    ? inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+    : inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8";
 
   return (
-    <section id="tecnologias" className="py-20 px-4">
+    <div
+      className={`card-hover bg-white p-6 rounded-xl border border-(--border) transition-all duration-600 ${slideClass}`}
+      style={{ transitionDelay: `${index * 0.07}s` }}
+    >
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-2">
+          <span className="text-3xl" aria-hidden="true">{tech.icon}</span>
+          <h3 className="text-base font-bold">{tech.name}</h3>
+        </div>
+        <span className="text-sm font-semibold text-(--primary) tabular-nums">
+          {count}%
+        </span>
+      </div>
+      <p className="text-xs text-(--text-muted) mb-3">{tech.label}</p>
+      <div
+        role="progressbar"
+        aria-label={`${tech.name}: ${tech.level}% — ${tech.label}`}
+        aria-valuenow={tech.level}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        className="w-full h-2 bg-neutral-200 rounded-full overflow-hidden"
+      >
+        <div
+          className={`h-full bg-gradient-to-r ${tech.color} rounded-full transition-all duration-1000`}
+          style={{
+            width: inView ? `${tech.level}%` : "0%",
+            transitionDelay: `${index * 0.07 + 0.3}s`,
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
+export default function Skills() {
+  const { ref, inView } = useInView<HTMLElement>();
+
+  return (
+    <section id="tecnologias" ref={ref} className="py-20 px-4 bg-neutral-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+        <h2
+          className={`text-4xl md:text-5xl font-bold mb-12 text-center transition-all duration-700 ${
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+        >
           <span className="gradient-text">Tecnologias</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {technologies.map((tech, index) => (
-            <div
-              key={tech.name}
-              className={`card-hover bg-white dark:bg-[#1a1a1a] p-8 rounded-xl border border-(--border) transition-all duration-500 ${
-                mounted
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="text-5xl mb-4 text-center">{tech.icon}</div>
-              <h3 className="text-2xl font-bold text-center mb-2">{tech.name}</h3>
-              <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                <div
-                  className={`h-full bg-linear-to-r ${tech.color} rounded-full transition-all duration-1000 ${
-                    mounted ? "w-full" : "w-0"
-                  }`}
-                  style={{ transitionDelay: `${index * 0.1 + 0.3}s` }}
-                />
-              </div>
-            </div>
+            <SkillCard key={tech.name} tech={tech} index={index} inView={inView} />
           ))}
         </div>
-        <p className="text-center text-(--text-muted) mt-12 text-lg">
+        <p
+          className={`text-center text-(--text-muted) mt-12 text-lg transition-all duration-700 delay-700 ${
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
           Essas são as tecnologias que uso com mais frequência em meus projetos
         </p>
       </div>

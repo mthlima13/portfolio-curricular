@@ -43,7 +43,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || menuOpen
-          ? "bg-white/95 dark:bg-[#1a1a1a]/95 backdrop-blur-md shadow-md"
+          ? "bg-white/95 backdrop-blur-md shadow-md"
           : "bg-transparent"
       }`}
     >
@@ -56,7 +56,9 @@ export default function Header() {
               mounted ? "opacity-100" : "opacity-0"
             }`}
           >
-            <span className="gradient-text">MF</span>
+            <span className="bg-linear-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">
+              Portfolio
+            </span>
           </a>
           <ul className="hidden md:flex gap-6 items-center">
             {navItems.map((item, index) => (
@@ -100,12 +102,12 @@ export default function Header() {
           }`}
           style={{ background: "inherit" }}
         >
-          <ul className="flex flex-col gap-1 py-4 px-4 bg-white/95 dark:bg-[#1a1a1a]/95 backdrop-blur-md border-t border-(--border)">
+          <ul className="flex flex-col gap-1 py-4 px-4 bg-white/95 backdrop-blur-md border-t border-(--border)">
             {navItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={(e) => handleNavClick(e, item.id)}
-                  className="block w-full text-left py-3 px-4 text-sm font-medium text-(--text-muted) hover:text-(--primary) hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors"
+                  className="block w-full text-left py-3 px-4 text-sm font-medium text-(--text-muted) hover:text-(--primary) hover:bg-black/5 rounded-lg transition-colors"
                 >
                   {item.label}
                 </button>
