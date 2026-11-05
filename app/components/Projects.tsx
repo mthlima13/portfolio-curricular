@@ -6,11 +6,11 @@ import GitHubIcon from "./GitHubIcon";
 
 const projects = [
   {
-    title: "IronFit — Treinos com IA",
+    title: "IronFit",
     repoUrl: "https://github.com/mthlima13/ironmind-ai",
     description:
-      "Aplicativo Android de treinamento físico que combina registro rápido de séries, planejamento de programas, análise de desempenho e recomendações assistidas por IA — com saída estruturada e validação no backend.",
-    screenshot: "/projects/ironmind.png",
+      "Aplicativo Android de treinamento físico que combina registro rápido de séries, planejamento de programas, análise de desempenho e recordes calculados de forma consistente no backend.",
+    screenshot: "/projects/ironfit.png",
     stack: ["React Native", "Expo", "TypeScript", "Java", "Spring Boot", "MongoDB"],
   },
 ];
