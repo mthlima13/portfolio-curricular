@@ -6,20 +6,12 @@ import GitHubIcon from "./GitHubIcon";
 
 const projects = [
   {
-    title: "Nutri Planner",
-    repoUrl: "https://github.com/mthlima13/nutri-planner",
+    title: "IronFit — Treinos com IA",
+    repoUrl: "https://github.com/mthlima13/ironmind-ai",
     description:
-      "Plataforma moderna para planejamento nutricional, focada em ajudar usuários a baterem suas metas de calorias e macros através de cardápios semanais personalizados, respeitando restrições alimentares.",
-    screenshot: "/projects/nutri.png",
-    stack: ["Java", "Spring Boot", "Next.js", "TypeScript", "PostgreSQL"],
-  },
-  {
-    title: "Pass Core — Gerenciador de Senhas",
-    repoUrl: "https://github.com/mthlima13/pass-core",
-    description:
-      "Gerenciador de senhas seguro e intuitivo que permite armazenar e acessar credenciais com criptografia AES-256.",
-    screenshot: "/projects/image.png",
-    stack: ["Java", "Spring Boot", "React", "TypeScript", "MongoDB"],
+      "Aplicativo Android de treinamento físico que combina registro rápido de séries, planejamento de programas, análise de desempenho e recomendações assistidas por IA — com saída estruturada e validação no backend.",
+    screenshot: "/projects/ironmind.png",
+    stack: ["React Native", "Expo", "TypeScript", "Java", "Spring Boot", "MongoDB"],
   },
 ];
 
@@ -30,6 +22,8 @@ const stackColors: Record<string, string> = {
   TypeScript:   "bg-indigo-50 text-indigo-700 border-indigo-200",
   React:        "bg-indigo-50 text-indigo-600 border-indigo-200",
   PostgreSQL:   "bg-indigo-50 text-indigo-700 border-indigo-200",
+  "React Native":"bg-indigo-50 text-indigo-600 border-indigo-200",
+  Expo:         "bg-indigo-50 text-indigo-600 border-indigo-200",
   MongoDB:      "bg-neutral-100 text-neutral-700 border-neutral-300",
 };
 
