@@ -16,7 +16,7 @@ const projects: Array<{
     repoUrl: "https://github.com/mthlima13/barber",
     description:
       "Sistema completo de agendamento para barbearia: reserva online com disponibilidade calculada no servidor, lista de espera que recupera horários perdidos, link seguro de gerenciamento sem conta e notificações por WhatsApp.",
-    screenshot: undefined,
+    screenshot: "/projects/barberflow.jpg",
     stack: ["Java", "Spring Boot", "Next.js", "TypeScript", "PostgreSQL"],
   },
   {
