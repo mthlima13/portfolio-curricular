@@ -21,10 +21,70 @@ export default function SiteCreation() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="gradient-text">Crio Sites</span>
             </h2>
-            <p className="text-lg text-(--text-muted) mb-8 max-w-2xl mx-auto">
-              Além dos projetos pessoais, eu crio sites para quem quer uma presença
-              profissional na internet: landing pages, portfólios e sites institucionais,
-              modernos e responsivos.
+            <p className="text-lg text-(--text-muted) mb-10 max-w-2xl mx-auto">
+              Quer colocar sua ideia, seu negócio ou seu trabalho na internet? Eu crio sites
+              modernos, rápidos e responsivos, do design ao ar no ar — você não precisa entender
+              de tecnologia, eu cuido de tudo.
+            </p>
+
+            {/* Benefícios */}
+            <div className="grid gap-4 sm:grid-cols-2 mb-10 text-left">
+              {[
+                {
+                  icon: "📱",
+                  title: "100% responsivo",
+                  text: "Perfeito no celular, tablet e computador — onde quer que seus clientes estejam.",
+                },
+                {
+                  icon: "⚡",
+                  title: "Rápido e moderno",
+                  text: "Sites que carregam rápido e passam credibilidade na primeira visita.",
+                },
+                {
+                  icon: "💰",
+                  title: "Preço acessível",
+                  text: "Valores que cabem no orçamento de autônomo, pequeno negócio ou projeto pessoal.",
+                },
+                {
+                  icon: "🤝",
+                  title: "Acompanhamento direto",
+                  text: "Falo com você do início ao fim: nada de intermediários ou burocracia.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="flex gap-4 bg-white border border-(--border) rounded-xl p-5"
+                >
+                  <span className="text-3xl shrink-0" aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <p className="text-sm text-(--text-muted)">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Tipos de site */}
+            <div className="flex flex-wrap justify-center gap-2 mb-10" aria-label="Tipos de site">
+              {[
+                "Landing pages",
+                "Portfólios",
+                "Sites institucionais",
+                "Cardápios e agendamentos",
+                "Páginas de apresentação pessoal",
+              ].map((tipo) => (
+                <span
+                  key={tipo}
+                  className="text-xs font-medium px-3 py-1.5 rounded-full border bg-white border-(--border) text-(--text-muted)"
+                >
+                  {tipo}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-(--text-muted) mb-8 max-w-2xl mx-auto">
+              Me chame no WhatsApp, conte sua ideia e receba uma proposta sem compromisso —
+              a conversa é gratuita. 🙂
             </p>
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`}
