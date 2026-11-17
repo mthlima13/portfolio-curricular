@@ -4,7 +4,21 @@ import Image from "next/image";
 import { useInView } from "../hooks/useInView";
 import GitHubIcon from "./GitHubIcon";
 
-const projects = [
+const projects: Array<{
+  title: string;
+  repoUrl: string;
+  description: string;
+  screenshot?: string;
+  stack: string[];
+}> = [
+  {
+    title: "BarberFlow — Agendamento para Barbearia",
+    repoUrl: "https://github.com/mthlima13/barber",
+    description:
+      "Sistema completo de agendamento para barbearia: reserva online com disponibilidade calculada no servidor, lista de espera que recupera horários perdidos, link seguro de gerenciamento sem conta e notificações por WhatsApp.",
+    screenshot: undefined,
+    stack: ["Java", "Spring Boot", "Next.js", "TypeScript", "PostgreSQL"],
+  },
   {
     title: "IronFit",
     repoUrl: "https://github.com/mthlima13/ironmind-ai",
@@ -76,22 +90,24 @@ export default function Projects() {
                   </p>
 
                   <div className="relative aspect-video rounded-lg overflow-hidden border border-(--border) bg-(--bg-muted) max-w-2xl">
-                    <Image
-                      src={project.screenshot}
-                      alt={`${project.title} — preview`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 672px"
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        target.style.display = "none";
-                        const fallback = target.nextElementSibling as HTMLElement | null;
-                        if (fallback) fallback.style.display = "flex";
-                      }}
-                    />
+                    {project.screenshot ? (
+                      <Image
+                        src={project.screenshot}
+                        alt={`${project.title} — preview`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 672px"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          target.style.display = "none";
+                          const fallback = target.nextElementSibling as HTMLElement | null;
+                          if (fallback) fallback.style.display = "flex";
+                        }}
+                      />
+                    ) : null}
                     <div
                       className="absolute inset-0 flex items-center justify-center text-(--text-muted) text-sm bg-(--bg-muted)"
-                      style={{ display: "none" }}
+                      style={{ display: project.screenshot ? "none" : "flex" }}
                     >
                       Preview indisponível
                     </div>
