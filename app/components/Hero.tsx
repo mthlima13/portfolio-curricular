@@ -47,7 +47,7 @@ export default function Hero() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              Desenvolvedor em formação com foco em backend e desenvolvimento web — e também crio sites para quem quer uma presença profissional na internet.
+              Desenvolvedor formado em Análise e Desenvolvimento de Sistemas (ADS), com foco em backend e desenvolvimento web, em busca de novas oportunidades — e também crio sites para quem quer uma presença profissional na internet.
             </p>
             <p
               className={`text-lg text-neutral-500 mb-10 max-w-xl transition-all duration-700 delay-300 ${
