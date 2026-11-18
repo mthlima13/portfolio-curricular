@@ -54,13 +54,19 @@ export default function Hero() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              Desenvolvo projetos próprios utilizando tecnologias modernas, aplicando boas práticas, organização de código e construção de APIs e aplicações funcionais.
+              Desenvolvo projetos próprios utilizando tecnologias modernas, aplicando boas práticas, organização de código e construção de APIs e aplicações funcionais. E se você precisa de um site para seu negócio, portfólio ou ideia, eu crio do design ao ar — moderno, rápido e sem complicação.
             </p>
             <div
               className={`flex flex-col sm:flex-row gap-4 justify-center md:justify-start transition-all duration-700 delay-[400ms] ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
+              <button
+                onClick={() => handleScrollTo("sites")}
+                className="px-8 py-4 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-all duration-300 card-hover"
+              >
+                Quero um Site
+              </button>
               <button
                 onClick={() => handleScrollTo("projetos")}
                 className="px-8 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-500 transition-all duration-300 card-hover"
